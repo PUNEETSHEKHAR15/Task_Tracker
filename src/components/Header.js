@@ -13,8 +13,6 @@ function Header({ title }) {
         <header className='header'>
             <h1 >{title}</h1>
             <Button color="green " text="Add" onclick={onclick} />
-            {/* <Button text="hello" onclick={onclick} />
-            <Button text="hey" onclick={onclick} /> */}
 
         </header>
     )
