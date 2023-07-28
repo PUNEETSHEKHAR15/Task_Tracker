@@ -1,5 +1,24 @@
-function Button({ color, text }) {
-    return <button style={{ backgroundColor: color }} className='btn'>{text}</button>
+import PropTypes from 'prop-types'
+
+function Button({ color, text, onclick }) {
+    return (
+        <>
+            <button
+                onClick={onclick}
+                style={{ backgroundColor: color }}
+                className='btn'>
+                {text}</button>
+        </>
+    )
+}
+
+Button.defaultProps = {
+    color: "steelblue"
+}
+Button.propTypes = {
+    text: PropTypes.string,
+    color: PropTypes.string,
+    onclick: PropTypes.func,
 }
 
 export default Button
